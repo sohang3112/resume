@@ -81,7 +81,7 @@ dt {
 #main-content {
     margin: 5px;
     flex-grow: 10;
-    flex-basis: 0;
+    flex-basis: auto;
     color: #555;
 }
 
