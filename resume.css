@@ -1,0 +1,101 @@
+html {
+    --theme-color: rgba(44, 130, 201, 1);
+    --theme-color-darker: rgba(31, 58, 147, 1);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0.2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a, a:hover, a:link, a:visited {
+    color: inherit;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a[target="_blank"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f35d';
+}
+
+body {
+    display: flex;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7rem;
+    padding: 0 5px;
+    margin: 0 20%;
+}
+
+.fas {
+    margin-right: 3px;
+}
+
+#sidebar {
+    background-color: var(--theme-color);
+    color: white;
+    margin: 5px;
+    flex-grow: 7;
+    flex-basis: 0;
+}
+
+#sidebar > * {
+    padding: 0 5px;
+}
+
+header {
+    margin: 10px 0;
+}
+
+#sidebar h2 {
+    background-color: var(--theme-color-darker);
+    padding: 5px;
+    font-size: 1.6em;
+}
+
+#sidebar h3 {
+    font-size: 1.3em;
+}
+
+#sidebar dt {
+    margin-top: 5px;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#main-content {
+    margin: 5px;
+    flex-grow: 10;
+    flex-basis: 0;
+    color: #555;
+}
+
+#main-content h2 {
+    color: var(--theme-color);
+}
+
+#main-content dt {
+    color: black;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;      /* force Chrome to print background colors */
+        margin: 0;
+    }
+}
