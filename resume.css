@@ -46,8 +46,9 @@ body {
 #sidebar {
     background-color: var(--theme-color);
     color: white;
+    min-width: 260px;
     margin: 5px;
-    flex-grow: 7;
+    flex-grow: 8;
     flex-basis: 0;
 }
 
@@ -73,24 +74,33 @@ header {
     margin-top: 5px;
 }
 
+#sidebar dd {
+    margin-top: 3px;
+}
+
 dt {
     font-weight: bold;
     font-size: 1.2em;
 }
 
-#main-content {
+main {
     margin: 5px;
     flex-grow: 10;
     flex-basis: auto;
     color: #555;
 }
 
-#main-content h2 {
+main h2 {
     color: var(--theme-color);
 }
 
-#main-content dt {
+main dt {
     color: black;
+}
+
+.project-link {
+    font-weight: bold;
+    color: blue;
 }
 
 @media print {
