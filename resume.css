@@ -3,6 +3,15 @@ html {
     --theme-color-darker: rgba(31, 58, 147, 1);
 }
 
+body {
+    display: flex;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7rem;
+    padding: 0 5px;
+    margin: 0 10%;
+}
+
 h1, h2, h3 {
     margin: 0;
     padding: 0.2rem;
@@ -30,15 +39,6 @@ a[target="_blank"]::after {
     content: '\f35d';
 }
 
-body {
-    display: flex;
-    font-family: arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.7rem;
-    padding: 0 5px;
-    margin: 0 20%;
-}
-
 .fas {
     margin-right: 3px;
 }
@@ -48,7 +48,7 @@ body {
     color: white;
     min-width: 260px;
     margin: 5px;
-    flex-grow: 8;
+    flex-grow: 10;
     flex-basis: 0;
 }
 
@@ -81,6 +81,7 @@ header {
 dt {
     font-weight: bold;
     font-size: 1.2em;
+	margin-top: 3px;
 }
 
 main {
