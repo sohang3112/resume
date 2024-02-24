@@ -1,4 +1,6 @@
 # MY RESUME
+**Archiving this repo:** This is no longer my latest resume. Instead my latest resume (in LATEX, based on *Jake's Resume*) is developed at [Overleaf](https://www.overleaf.com).
+
 My resume (as a web page)
 
 View resume in browser at https://htmlpreview.github.io/?https://github.com/sohang1/resume/blob/master/resume.html
