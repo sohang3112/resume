@@ -1,48 +1,61 @@
 name: Generate PDF
 
-# only run if latex file changed
 on:
   push:
     paths:
       - 'software_engineer.tex'
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
-    container: leplusorg/latex
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
+  compile:
+    runs-on: ubuntu-latest
+    needs: setup
+    container: leplusorg/latex
+    steps:
+    - name: Compile LaTeX document
+      run: |
+        pdflatex software_engineer.tex
+
+  commit:
+    runs-on: ubuntu-latest
+    needs: compile
     steps:
     - name: Install Git
       run: |
         apt-get update -y 
-        # dpkg --configure -a
         apt-get install -y git
-
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Compile LaTeX document
-      run: |
-        pdflatex software_engineer.tex
 
     - name: Commit PDF to repository
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # Configure Git user
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
+        git config --global safe.directory '*'
 
         git add software_engineer.pdf
         git commit -m "Add generated PDF"
         git push
 
+  upload:
+    runs-on: ubuntu-latest
+    needs: commit
+    steps:
     - name: Upload PDF
       uses: actions/upload-artifact@v3
       with:
         name: software_engineer.pdf
         path: software_engineer.pdf
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: upload
+    steps:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
