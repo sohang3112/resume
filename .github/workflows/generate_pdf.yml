@@ -1,5 +1,7 @@
 name: Generate PDF
 
+# NOTE: due to this on: push: filepath , workflow is only triggered if there's any change in latex file
+# To trigger on every push, regardless of whether latex was changed or not, keep just on: push
 on:
   push:
     paths:
