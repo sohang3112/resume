@@ -6,25 +6,16 @@ on:
       - 'software_engineer.tex'
 
 jobs:
-  setup:
+  build-pdf:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
-  compile:
-    runs-on: ubuntu-latest
-    needs: setup
-    container: leplusorg/latex
-    steps:
     - name: Compile LaTeX document
       run: |
         pdflatex software_engineer.tex
-
-  commit:
-    runs-on: ubuntu-latest
-    needs: compile
-    steps:
+        
     - name: Install Git
       run: |
         apt-get update -y 
@@ -42,9 +33,9 @@ jobs:
         git commit -m "Add generated PDF"
         git push
 
-  upload:
+  upload-to-actions:
     runs-on: ubuntu-latest
-    needs: commit
+    needs: build-pdf
     steps:
     - name: Upload PDF
       uses: actions/upload-artifact@v3
@@ -52,9 +43,9 @@ jobs:
         name: software_engineer.pdf
         path: software_engineer.pdf
 
-  deploy:
+  deploy-to-github-pages:
     runs-on: ubuntu-latest
-    needs: upload
+    needs: build-pdf
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
