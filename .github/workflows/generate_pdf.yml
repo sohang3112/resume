@@ -1,0 +1,29 @@
+name: Generate PDF
+
+on:
+  push:
+    paths:
+      - 'software_engineer.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up TeX Live
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-full
+
+    - name: Compile LaTeX document
+      run: |
+        pdflatex software_engineer.tex
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v3
+      with:
+        name: software_engineer.pdf
+        path: software_engineer.pdf
