@@ -10,12 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container:
-      image: texlive/latex:latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+
+    - name: Set up TeX Live
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-full
 
     - name: Compile LaTeX document
       run: |
