@@ -5,3 +5,5 @@ Built in Latex based on template [Jake's Resume](https://github.com/jakegut/resu
 - *Optional*: Install Latex visual editor: `sudo apt install -y texlive-xetex`
 - Convert to pdf: `pdflatex software_engineer.tex`
 - Convert to HTML: `hlatex software_engineer.tex`
+
+
