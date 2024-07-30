@@ -8,6 +8,7 @@ on:
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
+    container: leplusorg/latex
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
