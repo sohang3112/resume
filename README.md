@@ -12,5 +12,3 @@ Github Action is setup to generate PDF from Latex - simply change the Latex code
 - Convert to pdf: `pdflatex software_engineer.tex`
 - Convert to HTML: `hlatex software_engineer.tex`
 -->
-
-
