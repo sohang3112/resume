@@ -103,21 +103,52 @@
     \href{https://github.com/sohang3112}{\underline{github.com/sohang3112}}
 \end{center}
 
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology, Madras}
+      {}
+      {Master of Technology in Industrial Artificial Intelligence}
+      {Sept 2025 -- Present}
+  
+    \resumeSubheading
+      {Dayalbagh Educational Institute, Agra}{}
+      {Bachelor of Technology in Electrical Engineering, Minor in Computer Science}{July 2018 -- May 2022}
+  \resumeSubHeadingListEnd
+
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Software Engineer}{January 2022 -- Present}
+      {Software Engineer}
+      {September 2024 -- Present}
+      {HCL Technology}
+      {Remote (Noida)}
+      \resumeItemListStart
+        \resumeItem{Consitently attained "Distinguished Performance" appraisal rating.}
+        \resumeItem{Part of a team making a Python package to prune Tensorflow Vision models by 50 \% so they run on resource-constrained chips.}
+        \resumeItem{Worked on CI/CD Github Actions that automatically check code formatting \& test it.}
+        \resumeItem{Refined usability by improving error tracebacks and documentation, and automated testing \& validation to minimize bugs.}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Software Engineer}{January 2022 -- October 2024}
       {MFilterIt}{Noida}
       \resumeItemListStart
+        \iffalse
+        %-- Commented, too many bullet  points! ---%
         \resumeItem{Enhanced translation \textbf{efficiency} by over 600\% through \textbf{multithreading} and chunking, streamlining workflow by processing tasks in parallel}
-        \resumeItem{Engineered a \textbf{real-time face swap} feature for video streams using \textbf{AWS EC2 GPU server}, enhancing user interaction by integrating celebrity face overlays.}
-        \resumeItem{Collaborated in a multi-disciplinary team of 10+ to develop \textbf{Flask microservices} for data analytics with a \textbf{MySQL database}, ensuring CCPA compliance in advertising strategies.}
-        \resumeItem{Fine-tuned \textbf{Natural Language Processing} models with \textbf{Keras} and \textbf{PyTorch}, specializing in text detection and generation tasks.}
-        \resumeItem{Implemented content monitoring and data collection tools using \textbf{Selenium}, \textbf{AWS Lambda} and \textbf{Pandas} to identify and analyze discrepancies in client web and mobile platforms.}
+        \resumeItem{Engineered a \textbf{real-time face swap} feature for video streams using an \textbf{AWS EC2 GPU server}, enhancing user experience by integrating celebrity face overlays.}
+        \resumeItem{Collaborated in a multi-disciplinary team of 10+ to develop \textbf{Flask REST API microservices} for data analytics with a \textbf{MySQL database}, ensuring CCPA compliance in advertising strategies.}
+        \fi
+        
+        \resumeItem{Fine-tuned \textbf{Natural Language Processing} models with \textbf{Keras} and \textbf{PyTorch}, specialising in text detection and generation tasks.}
+        \resumeItem{Implemented content monitoring and data collection tools using \textbf{Selenium}, \textbf{AWS Lambda} and \textbf{Pandas} to identify and analyse discrepancies in client web and mobile platforms.}
       \resumeItemListEnd
-      
+
+    \iffalse
+    % ----------------- Commented: don't have proof (completion document) ------------%
     \resumeSubheading
       {Data Analyst (Intern)}{October -- December 2021}
       {Trade Global}{Delhi}
@@ -125,6 +156,7 @@
         \resumeItem{Analyzed 10 GB of historical stock data efficiently with \textbf{Pandas} in \textbf{Jupyter Notebook}.}
         \resumeItem{Backtested over 10 stock strategies using Zerodha Kite API on historical data to select optimal trading strategies.}
     \resumeItemListEnd
+    \fi
 
     \resumeSubheading
       {Software Engineer (Intern)}{April –- September 2021}
@@ -134,42 +166,50 @@
         \resumeItem{Enabled easy execution of created tasks multiple times using \textbf{Selenium}, a web automation library.}
     \resumeItemListEnd
 
+    \iffalse
+    %--------- Removed, web dev experience not relevant -----------%
     \resumeSubheading
       {Front End Web Developer (Intern)}{June 2019}
       {Blazar Software Solutions}{Delhi}
       \resumeItemListStart
         \resumeItem{Created beautiful web pages for a project, using \textbf{HTML5 \& CSS} with \textbf{Bootstrap} components.}
         % -- MAYBE remove following point - didn't learn much SEO anyway
-        \resumeItem{Learned SEO tasks, optimizing page load times via Developer Tools.}
+        \resumeItem{Learned SEO tasks, optimising page load times via Developer Tools.}
     \resumeItemListEnd
+    \fi
 
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects \& Open Source Contributions}
+    %------------ Commented because unrelated to c, embedded programming ---------------%
     \resumeSubHeadingListStart 
-      \resumeProjectHeading
-          %--- Last section empty because date omitted ---%
-       {\textbf{\href{https://github.com/python/typeshed/pull/10735}{\underline{Contributor: Flask-SocketIO Type Stubs in Python}}} $|$ \emph{Python, Flask, Open Source}}{}
-         \resumeItemListStart
-           \resumeItem{Contributed type stub files for Flask-SocketIO (a \textbf{Flask} extension library) in \textbf{Python} typeshed, enhancing static type checking. The pull request was successfully merged.}
-        \resumeItemListEnd
     
       \resumeProjectHeading
-       %--- Last section empty because date omitted ---%
        {\textbf{\href{https://github.com/sohang3112/iforth}{\underline{IForth (Jupyter kernel for Forth)}}} $|$ \emph{Python, Forth, Open Source}}{}
         \resumeItemListStart
-            \resumeItem{Revitalized the abandoned IForth \textbf{Open Source} repository by adding code prettification, shell command support, and stability enhancements including kernel termination management.}
+            \resumeItem{Revitalised the abandoned IForth \textbf{Open Source} repository by adding code prettification, shell command support, and stability enhancements, including Jupyter kernel termination management.}
             \resumeItem{Packaged and published the enhanced IForth as a \textbf{Python} package and facilitated deployment with a new \textbf{Dockerfile}, and added documentation for easy use.}
         \resumeItemListEnd
 
         \resumeProjectHeading
-       %--- Last section empty because date omitted ---%
+        {\textbf{Open Source Merged PRs} $|$ \emph{JavaScript, Python, C, Rust}}{}
+          \resumeItemListStart
+            \resumeItem{\emph{JavaScript}: ngn/apl: Made web app installable as a Progressive Web App (PWA) so it can be run offline on mobile or web.}
+            \resumeItem{\emph{Python}: Added type hint stubs for Flask-SocketIO library to allow static type checking.}
+            \resumeItem{\emph{Rust}: Macrokata: Fix compile error in an exercise.}
+            \resumeItem{\emph{C}: 2048.c: Added --help, --version CLI arguments}
+          \resumeItemListEnd
+          
+        \iffalse
+        %---------- Commented because unrelated to C, embedded programming ----------%
+        \resumeProjectHeading
        {\textbf{\href{https://github.com/sohang3112/face\_login}{\underline{Login using Face Detection}}} $|$ \emph{Python (FastApi), HTML / CSS / JS}}{}
         \resumeItemListStart
             \resumeItem{Web-based prototype for Login using \textbf{Face Detection}, with proper usage documentation.}
         \resumeItemListEnd
+        \fi
 
       \iffalse
       %------ Commented (maybe not that important & impressive?) -----%
@@ -180,38 +220,43 @@
           \resumeItemListEnd
         \fi
 
-        \iffalse
-        %-- Commented (Kushagara suggested to remove C++ project since not applying for C++) ---%
         \resumeProjectHeading
-              {\textbf{Electrical Charge Simulator} $|$ \emph{C++, SFML}}{October 2019}
+        {\textbf{\href{https://github.com/sohang3112/json-parser}{\underline{JSON Parser from scratch}}}
+         $|$ \emph{Haskell}}
+         {}
+         \resumeItemListStart
+            \resumeItem{A JSON Parser implemented using parser combinators with Parsec library in Haskell (functional programming).}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Embedded Morse Code Generator} $|$ \emph{C++, Arduino}}{}
+          \resumeItemListStart 
+             \resumeItem{Developed a C-based Arduino application that converts user text input to Morse Code output via LEDs.}
+          \resumeItemListEnd
+
+        \resumeProjectHeading
+              {\textbf{Electrical Charge Simulator} $|$ \emph{C++, SFML}}{}
               \resumeItemListStart
                 \resumeItem{Simulated interaction of 100s of randomly charged particles in space.}
                 \resumeItem{Studied many interesting phenomena (such as slingshot due to electromagnetic field).}
               \resumeItemListEnd
-        \fi
     \resumeSubHeadingListEnd
-
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Dayalbagh Educational Institute}{Agra}
-      {Bachelor of Technology in Electrical Engineering, Minor in Computer Science}{July 2018 -- May 2022}
-  \resumeSubHeadingListEnd
 
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, SQL, HTML / CSS / JavaScript, JSON} \\
-     %----- Removed (Bash, C++, C#, Java): Kushagara suggested removing ones I'm not that confident in -----%
-     \textbf{Frameworks \& Libraries}{: Flask, FastApi, Pydantic, Selenium, Data Exploration with Numpy \& Pandas, Matplotlib} \\
+     \textbf{Languages}{: Python, SQL, JavaScript, C++, Rust} \\
+     \textbf{Frameworks \& Libraries}{: Tensorflow, MySQL, Flask, FastAPI, Selenium, Numpy \& Pandas} \\
      %----- Removed (WPF Framework for .NET, SFML, Bootstrap, JQuery, NodeJS): Kushagara suggested removing ones I'm not that confident in ----%
-     \textbf{Skills \& Concepts}{: AWS (Lambda, Fargate, ECS, EC2, S3), Docker, Linux, MySQL, Jupyter Notebook, Full Stack Web, Web Scraping, Arduino Programming, MVC, Object Oriented Programming, Git, Open Source} \\
+     \textbf{Skills \& Concepts}{: Full Stack Web, AWS, Github Actions CI, Docker, Linux, Arduino, Machine Learning, Generative AI (LLMs), Web Scraping, Object Oriented Programming, Git, Open Source} \\
     }}
  \end{itemize}
+
+\iffalse
+%--- Commented - Kushagara advised to remove ---%
+     
 
 %----- BEGINNER-PROFICIENCY PROGRAMMING LANGUAGES -----------
 \section{Additional Technical Skills}
@@ -219,8 +264,6 @@
     \small{\item{
      \textbf{Haskell}: Implemented a JSON \textsf{parser} from scratch using \textsf{Parsec}: \url{https://github.com/sohang3112/json-parser} \\
 
-     \iffalse
-     %--- Commented - Kushagara advised to remove langs with no project experience ---%
      \textbf{Rust}{: Completed Rustlings (practice exercises for Rust), Solving Macrokata exercises.} \\
      \textbf{NodeJS/ExpressJS}{: Familiar with creating basic servers using NodeJS and ExpressJS} \\
      \textbf{Clojure}{: Solved HackerRank problems.} \\
@@ -228,11 +271,7 @@
     }}
  \end{itemize}
 
-%-------------------------------------------------------
+\fi
+
+%-------------------------------------------
 \end{document}
-
-
-
-
-
-
