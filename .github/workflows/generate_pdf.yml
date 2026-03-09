@@ -8,14 +8,16 @@ on:
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
-    container: leplusorg/latex
+    container: 
+      image: leplusorg/latex
+      options: --user root        # without root, github checkout action raises error
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Compile LaTeX document
-      run: |
-        pdflatex software_engineer.tex
+      run: pdflatex software_engineer.tex
         
     - name: Install Git
       run: |
